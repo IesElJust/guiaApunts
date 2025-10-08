@@ -1,0 +1,75 @@
+site_name: Unitat 1. Introducció a Markdowm
+#site_description: El teu resum ací
+#site_author: El teu nom ací
+nav:
+  - "Presentació": 'index.md'
+  - "1. Markdown": '1.Markdown.md'
+  - "2. Edició": '2.Edició.md'
+  - "3. Corrector": '3.Corrector.md'
+
+theme:
+  name: 'material'
+  logo: 'imatges/logoMarkdown.png'
+  favicon: 'imatges/logoMarkdown.png'
+  palette:
+    primary: 'white'
+
+  features:
+    - content.code.copy # PEr copiar codi
+    - content.code.annotate
+    - search.suggest
+    
+#  custom_dir: 'custom' # Per afegir html extra
+
+extra_css:
+  - extra.css
+
+plugins:
+  - search
+  - glightbox   # Per vore les imatges en gran quan fas clic en elles.
+  - exclude-unused-files:
+      file_types_to_check: ["png", "jpg", "jpeg", "gif"]
+      enabled: true
+
+#  - pandoc
+#      template: /usr/share/mdfactory/templates/eisvogel.latex
+
+
+markdown_extensions:
+  - attr_list           # Permet incorporar atributs a les imatges { width=100px }
+  - md_in_html # Junt a attr_list per afegir peus a les imatges, grids, etc
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+      auto_title: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      baselevel: 2
+      toc_depth: 3
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true  
+  - pymdownx.arithmatex:
+      generic: true
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+#extra:
+#  social:
+#    - type: 'github'
+#      link: 'https://github.com/El-teu-nom-d'usuari'
+#    - type: 'twitter'
+#      link: 'https://twitter.com/El-teu-nom-d'usuari'
+
