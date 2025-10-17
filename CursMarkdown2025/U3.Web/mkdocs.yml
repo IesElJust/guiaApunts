@@ -1,0 +1,31 @@
+site_name: Web estàtica amb mkdocs
+docs_dir: "md"
+site_dir: "docs"
+nav:
+  - 1. Introducció: index.md
+  - 2. Instal·lació: instal·lacio.md
+  - 3. Configuració: configuracio.md
+  - 4. Allotgem la web a Aules: aules.md
+  - 5. Allotgem la web a github: github.md
+  - "6. Docència: Aules o github?": aules vs github.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+
+theme:
+  name: 'material'
+  logo: 'img/logoMarkdown.png'
+  favicon: 'img/logoMarkdown.png'
+  palette:
+    primary: 'white'
+
+#extra_css:
+#  - css/extra.css
+
+
+
+# plugins:
+#   - search
+#   - pdf-export
