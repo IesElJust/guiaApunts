@@ -1,0 +1,649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../configuracio/">
+      
+      
+      <link rel="icon" href="../img/logoMarkdown.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>2. Instal·lació - Web estàtica amb mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-installacio-dmkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Web estàtica amb mkdocs" class="md-header__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web estàtica amb mkdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Instal·lació
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web estàtica amb mkdocs" class="md-nav__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    Web estàtica amb mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducció
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Instal·lació
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Instal·lació
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installacio-dmkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació d'mkdocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Instal·lació d'mkdocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacio-dun-entorn-virtual-de-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creació d'un entorn virtual de python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-installacio-dels-paquets-dmkdocs-amb-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instal·lació dels paquets d'MkDocs amb pip.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacio-dun-nou-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creació d'un nou projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-del-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Estructura del projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-servim-la-web-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Servim la web en local
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Configuració
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Allotgem la web a Aules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Allotgem la web a github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aules%20vs%20github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Docència: Aules o github?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installacio-dmkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació d'mkdocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Instal·lació d'mkdocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacio-dun-entorn-virtual-de-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creació d'un entorn virtual de python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-installacio-dels-paquets-dmkdocs-amb-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instal·lació dels paquets d'MkDocs amb pip.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacio-dun-nou-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creació d'un nou projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-del-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Estructura del projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-servim-la-web-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Servim la web en local
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>2. Instal·lació</h1>
+
+<h3 id="1-installacio-dmkdocs">1. Instal·lació d'mkdocs</h3>
+<div class="admonition info">
+<p class="admonition-title">VSCode</p>
+<p>Per a realitzar estos passos, recomanem utilitzar VSCode, ja que ens permet tindre un editor d'arxius i una terminal oberta al mateix programa.</p>
+</div>
+<p>Els passos per realitzar la instal·lació s'han de realitzar des de la terminal (<em>Menu &gt; Sistema &gt; Konsole</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Usuaris de Windows</p>
+<p>Si fem ús de Windows, caldrà que instal·leu python prèviament. Això ho farem descarregant-lo des de <a href="https://www.python.org/">https://www.python.org/</a>, i assegurant-nos durant la instal·lació que marquem l'opció <em>Add Python to PATH.</em>.</p>
+</div>
+<h4 id="1-creacio-dun-entorn-virtual-de-python">1. <strong>Creació d'un entorn virtual de python</strong></h4>
+<p>El primer que hem de fer és crear un entorn virtual de Python. Això ens servirà per disposar d'un entorn propi per instal·lar components en python sense interferir en els components del sistema. Per a això llançarem la següent ordre (l'escriurem a la terminal i posarem <em>Intro</em>):</p>
+<pre><code class="language-bash">sudo apt install python3-venv
+</code></pre>
+<p>Una vegada instal·lat el paquet <code>python3-venv</code>, que és el qui ens proporciona la capacitat de crear aquests entorns virtuals, anem a crear un entorn virtual per treballar amb <em>MkDocs</em>. </p>
+<p>Per a això, ens situem primer a la carpeta on instal·larem l'entorn. Per exemple en <code>~/.local</code>:</p>
+<pre><code class="language-bash">cd .local
+</code></pre>
+<p>I llancem l'ordre:</p>
+<pre><code>python3 -m venv mkdocsenv
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Usuaris de Windows</p>
+<p>Amb windows llançarem:</p>
+<p><code>python -m venv mkdocsenv</code></p>
+</div>
+<h4 id="2-installacio-dels-paquets-dmkdocs-amb-pip">2. <strong>Instal·lació dels paquets d'MkDocs amb <code>pip</code>.</strong></h4>
+<p>Una vegada tenim creat l'entorn, l'hem d'activar, fent un <code>source</code> del fitxer d'activació:</p>
+<pre><code class="language-bash">source mkdocsenv/bin/activate
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Usuaris de Windows</p>
+<p>En Windows, haureu d'activar-lo llançant directament l'script:</p>
+<p><code>mkdocsenv\Scripts\activate</code></p>
+</div>
+<p>Veurem com el <em>prompt</em> ara canvia indicant que estem dins l'entorn.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important!</p>
+<p>Recordeu que cada vegada que aneu a utilitzar mkdocs haureu d'activar aquest entorn!</p>
+</div>
+<p>Una vegada dins l'entorn, ja podem instal·lar mkdocs, com a llibreria de python, amb l'ordre:</p>
+<pre><code class="language-bash">pip install mkdocs
+</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Què és pip?</p>
+<p><em>Pip</em> (Package Installer for Pyton) és un sistema de gestió de programari propi de Python. Així com <code>apt</code> ens serveix per descarregar programari dels repositoris del sistema operatiu, <code>pip</code> ho fa des del repositori de programari Python.</p>
+</div>
+<p>Amb aquesta base, ja podrem fer ús d'mkdocs, i anar instal·lant altres components a mesura que els anem necessitant.</p>
+<h3 id="2-creacio-dun-nou-projecte">2. Creació d'un nou projecte</h3>
+<p>Una vegada tenim mkdocs instal·lat, necessitem crear un nou projecte per a construir la nostra web. Per tal de començar un nou projecte, executem:</p>
+<pre><code class="language-sh">mkdocs new &quot;nom del projecte&quot;
+</code></pre>
+<h3 id="3-estructura-del-projecte">3. Estructura del projecte</h3>
+<p>Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura com la següent:</p>
+<pre><code>.
+├── docs
+│   └── index.md
+└── mkdocs.yml
+</code></pre>
+<ul>
+<li>L'arxiu <strong>mkdocs.yml</strong> és l'arxiu de configuració de tot el projecte.</li>
+<li>La carpeta <strong>docs</strong> contindrà els nostres documents en format markdown.</li>
+<li>L'arxiu <strong>index.md</strong> és un arxiu de mostra que es mostrarà en format web al accedir a l'arrel del lloc web.</li>
+</ul>
+<p>Si et fixes, per una banda tindrem el contingut en markdown i per altra la configuració de com renderitzar aquest contingut.</p>
+<div class="admonition info">
+<p class="admonition-title">Carpeta docs</p>
+<p>Encara que per defecte els arxius en format markdown estan a la carpeta docs, anem a canviar esta configuració en apartats posteriors.</p>
+</div>
+<h3 id="4-servim-la-web-en-local">4. Servim la web en local</h3>
+<p>Per a servir una web, necessitaríem un servidor web que ens allotjara la nostra web per tal de poder accedir de forma local o remota a través del navegador. mkdocs ens facilita aquesta tasca creant un servidor al nostre ordinador per tal que pugam previsualitzar els canvis abans de servir-ho en un servidor públic (accessible a través d'internet) o construir la nostra web per a publicar-la.</p>
+<p>Per a servir la nostra web, simplement haurieu d'executar el següent comandament dins la carpeta del projecte (utilitzeu l'ordre cd per a navegar a ella):</p>
+<pre><code class="language-sh">$ mkdocs serve
+INFO     -  Building documentation...
+INFO     -  Cleaning site directory
+INFO     -  Documentation built in 0.06 seconds
+INFO     -  [12:49:32] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO     -  [12:49:32] Serving on http://127.0.0.1:8000/
+</code></pre>
+<p>Ara accedirem a l'URL <code>http://127.0.0.1:8000/</code> i podrem veure la pàgina web per defecte:</p>
+<p><img alt="index_per_defecte" src="../img/index_per_defecte.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Index per defecte</p>
+<p>Obriu al VSCode l'arxiu index.md i fixeu-vos com es correspon amb el que esteu veient a la web local. És a dir, s'està renderitzant el markdown en format web.</p>
+<p>Ara podeu introduir els canvis que desitgeu al vostre contingut, i en guardar, els canvis es reflectiran automàticament al navegador, sempre i quan, l'ordre mkdocs serve continue en execució. <strong>La autorecàrrega es produeix sempre que modifiquem l'arxiu de configuració, el contingut dels arxius markdown o els arxius del tema.</strong></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

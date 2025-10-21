@@ -9,5 +9,5 @@ Abans de començar amb el desenvolupament de l'apartat, explicarem breument què
 
 ### 1.1. Què és [mkdocs](https://www.mkdocs.org/)?
 
-!!!note "mkdocs"
+!!!info "mkdocs"
     Mkdocs és un generador de llocs web estàtics, pren com a entrada text escrit en markdown i utilitza dissenys predefinits per crear un lloc web estàtic. Podeu modificar l'aspecte del lloc, els enllaços, les dades que es mostren a la pàgina i moltes coses més.

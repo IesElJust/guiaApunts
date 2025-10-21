@@ -1,7 +1,5 @@
 /* @theme el-meu-tema */
-
-@import 'default';
-
-h1 {
-  color: violet !important;
+@import 'uncover';
+section {
+  background-color: violet !important;
 }

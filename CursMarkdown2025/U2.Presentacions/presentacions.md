@@ -6,7 +6,7 @@ theme: default
 paginate: true
 _paginate: false
 header: 'Presentacions utilitzant markdown/Marp'
-footer: 'CEFIRE València - Curs 22/23'
+footer: 'CEFIRE de Formació Professiona - Curs 25/26'
 backgroundImage: url('images/prova2.png')
 style: |
   h1{
@@ -34,7 +34,7 @@ _footer: ''
 
 ---
 # Presentacions
-Una vegada ja sabem utilitzar el llenguatge markdown i crear documents. **Perquè no crear presentacions també** utilitzant este llenguatge?
+Una vegada ja sabem utilitzar el llenguatge markdown. **Perquè no crear presentacions també** utilitzant este llenguatge?
 
 Existeixen diferents ferramentes que ens poden ajudar en aquesta tasca, algunes d'elles les podeu veure al següent [enllaç.](https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8)
 
@@ -53,7 +53,7 @@ Nosaltres ens centrarem en [**Marp**](https://marp.app/).
 ---
 # Marp vs altres
 
-Encara que Marp és una ferramenta que **no permet grans efectes visuals**, com altres de les que podeu trobar a l'[enllaç anterior](https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8) i que podeu provar, pots crear amb ella presentacions d'aspecte professional d'una forma molt més simple, per tant és la que recomanem. Una mostra del que es pot fer amb Marp, és el document que esteu vegent en estos moments.
+Encara que Marp és una ferramenta que **no permet grans efectes visuals**, com altres de les que podeu trobar a l'[enllaç anterior](https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8) i que podeu provar, pots crear amb ella presentacions d'aspecte professional d'una forma molt més simple, per tant és la que recomanem. Una mostra del que es pot fer amb Marp, és el document que esteu vegent en estos moments, generat amb aquesta ferramenta
 
 Altres alternatives com [reveal.js](https://revealjs.com/) són més complexes d'utilitzar, i sols les recomanem si sou desenvolupadors o esteu familiaritzats amb el desenvolupament web.
 
@@ -68,16 +68,27 @@ L'única cosa que heu d'instal·lar és l'extensió ***Marp for VS Code*** dels 
 
 > :fire:
 > Si no recordeu com s'instal·la una extensió al VS Code, ho teniu explicat al pdf *ConfigurarVSCodePandoc.pdf* de l'anterior tema.
+---
+# *Front Matter*
+El *front matter* en format YAML és una secció al principi d'un document, normalment en arxius Markdown, que conté metadades sobre el document. Aquestes metadades s'especifiquen en format YAML (YAML Ain't Markup Language), que és un llenguatge de serialització de dades fàcil de llegir.
+
+En general, el front matter es col·loca entre dues línies de triples guions (`---`) i pot incloure informació com el títol, l'autor, la data de publicació, les etiquetes, entre altres. Això permet que el sistema que gestiona el document puga llegir i utilitzar aquesta informació per diverses tasques, com la generació d'un índex, filtratge de contingut o aplicació d'estils específics.
 
 ---
 # Començant amb Marp
-El primer que hauriem de fer és crear un document markdown. Al front matter (capçalera YAML) definirem que volem habilitar l'extensió marp per poder previsualitzar la presentació. Si previsualitzem el resultat, obtindrem una imatge com la següent.
+El primer que hauriem de fer és crear un document markdown, recordeu, un document amb extensió .md.
 
-```markdown
+Al front matter (capçalera YAML) definirem que volem habilitar l'extensió marp per poder previsualitzar la presentació. 
+
+```yaml
 ---
 marp: true
 ---
 ```
+---
+# Començant amb Marp
+Si previsualitzem el resultat, obtindrem una imatge com la següent.
+
 ![w:600](images/marp-true.png)
 
 ---
@@ -85,7 +96,6 @@ marp: true
 Per canviar de diapositiva, insertarem un salt de línia i tres guionets.
 
 > També es pot utilitzar ___, *** o - - - (sense línia obligatòriament)
-
 
 El contingut de les diapositives l'escrivim directament amb markdown.
 
@@ -98,12 +108,12 @@ marp: true
 ---
 # Diapositiva 1
 
-CEFIRE València
+CEFIRE Formació Professional
 
 ---
 # Diapositiva 2
 
-Curs 2021/22
+Curs 2025/26
 
 ```
 ---
@@ -114,7 +124,11 @@ Curs 2021/22
 ---
 # Ús de directives
 
-Amb directives podem controlar el tema, la numeració de pàgines, l'encapçalament, el peu de pàgina, l'estil, etc.
+En el cas concret de Marp, utilitzant directives podem controlar el tema, la numeració de pàgines, l'encapçalament, el peu de pàgina, l'estil, etc.
+
+En este enllaç teniu més informació sobre les directives que podem utilitzar. Veurem les més importants en diapositives posteriors.
+
+[Directives de Marp](https://marpit.marp.app/directives)
 
 ---
 
@@ -153,6 +167,8 @@ S'apliquen a **tot el document** i sols s'aplica la última opció en cas d'esta
 ---
 # Exemple 2
 
+Configurem que els títols de segon nivell ens separen en diapositives diferents.
+
 ```markdown
 <!-- headingDivider: 2 -->
 
@@ -162,7 +178,7 @@ Contingut de la 1a diapositiva
 
 ## Disapositiva 2
 
-### Contingut de la 3a diapositiva
+### Contingut de la 2a diapositiva
 
 Hello, world!
 
@@ -414,6 +430,8 @@ Hem d'utilitzar *scoped*, per a aplicar una regla sols a la diapositiva actual i
 <style scoped> h1{ color: green; }</style>
 ```
 
+Fixeu-vos que en aplicar esta regla sols el títol d'aquesta diapositiva és verd.
+
 
 
 ---
@@ -449,19 +467,14 @@ Hem d'utilitzar *scoped*, per a aplicar una regla sols a la diapositiva actual i
 
 Els principals atributs que utilitzareu, seran:
 
-* font-size: 20px 
-  :gear: Per a canviar el tamany de lletra
-* color: red
-   :gear: Per a canviar el color de la lletra.
-* text-align: center | left | right | justify
-  :gear: Per a aliniar el text a dreta, esquerra o centre.
-* background-color: red
-  :gear:Per a definir el color de fons sense utilitzar la directiva.
-* font-family: "Times New Roman", Times, serif;
-  :gear: Per a canviar el tipus de lletra
-* border: 5px solid red;
-  :gear: Per a definir bordes als elements
-
+| Exemple                                       | Explicació                                                         |
+| --------------------------------------------- | ------------------------------------------------------------------ |
+| font-size: 20px                               | :gear: Per a canviar el tamany de lletra a 20 pixels                           |
+| color: red                                    | :gear: Per a canviar el color de la lletra a roig.                        |
+| text-align: center                            | :gear:  Per a aliniar el text al centre.          |
+| background-color: red                         | :gear:Per a definir el color de fons a roig sense utilitzar la directiva. |
+| font-family: "Times New Roman", Times, serif; | :gear: Per a canviar el tipus de lletra a Times New Roman.                          |
+| border: 5px solid red;                        | :gear: Per a definir borde roig de 5 pixels i estil sòlid a un element                           |
 
 ---
 # Transformem el .md a html, pdf, pptx, ...
@@ -487,7 +500,7 @@ Si eres dels que preferix la consola, pots instal·lar l'aplicació de consola m
 > :fire: Instal·leu el *chromium-browser* sols en cas de no tindre el *Google-Chrome* instal·lat.
 
 ~~~bash
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - 
+$ curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash - 
 $ sudo apt install nodejs
 $ sudo apt install npm
 $ sudo npm install -g @marp-team/marp-cli
@@ -544,7 +557,7 @@ Hem aconseguit baixar de 58 MB a 757KB transformant-lo a qualitat screen.
 Per a poder insertar arxius multimèdia, el primer pas és habilitar l'inserció de codi html en les presentacions. Per això anem a:  
 File -> Preferences -> Settings del VS Code
 
-Busquem marp i html (a la vegada) i habilitem l'html.
+Busquem marp i html (a la vegada) i habilitem l'html, posant l'opció en *all*.
 
 ![enable-html w:500](images/enable-html.png)
 
@@ -552,14 +565,18 @@ Ara podem insertar, a banda de markdown, codi html.
 
 ---
 # Insertem un vídeo local
-Si tenim una carpeta images que conté un arxiu *video.mp4*, l'insertem de la següent forma.
+Si tenim una carpeta *video* que conté un arxiu *planeta.mp4*, l'insertem de la següent forma.
+
 ```html
 <video width="600" height="400" controls>
   <source src="video/planeta.mp4">
 El teu navegador no soporta l'etiqueta video. Actualitza'l.
 </video>
 ```
-<video width="600" height="400" controls>
+
+---
+# Insertem un vídeo local
+<video width="600" height="400" style="display: block; margin: 0 auto;" controls>
   <source src="video/planeta.mp4" type="video/mp4">
 El teu navegador no soporta l'etiqueta video. Actualitza'l.
 </video>
@@ -568,25 +585,17 @@ El teu navegador no soporta l'etiqueta video. Actualitza'l.
 # Insertem un video de youtube
 La majoria de plataformes de video, ja et donen el codi html per poder-lo insertar-lo a la teua web o al teu curs d'aules. L'utilitzem d'igual forma a la nostra presentació. 
 
-Per exemple, per a insertar el curt *Pipas* des de youtube, el busquem a la web de youtube i fem clic al botó *Comparteix*. Després seleccionem *<>Insereix* i copiem el codi que ens proporciona a la presentació.
+Per exemple, per a insertar el [curt *Pipas* des de youtube](https://www.youtube.com/watch?v=H1v-bCyeIR4), el busquem a la web de youtube i fem clic al botó *Comparteix*. Després seleccionem *<>Insereix* i copiem el codi que ens proporciona a la presentació.
 
 ```html
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/H1v-bCyeIR4" 
-  title="YouTube video player" frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H1v-bCyeIR4?si=39GXwqZ929pMPR93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </iframe>
 ```
 
 ---
 # Curtmetratge *Pipas*
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/H1v-bCyeIR4" 
-  title="YouTube video player" frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
-</iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H1v-bCyeIR4?si=39GXwqZ929pMPR93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 # Insertem un clip d'àudio
@@ -618,18 +627,15 @@ Una altra forma d'insertar elements multimèdia d'internet és afegir el seu enl
 ---
 # Canviant el tema CSS
 
-## Si volem canviar el tema CSS, estos són els passos que hauriem de seguir.
+Si volem canviar el tema CSS, estos són els passos que hauriem de seguir.
 
----
 1. Creem una carpeta i la obrim amb VSCode.
 2. Posem l'arxiu CSS en eixa carpeta.
     1. Anem a suposar que és ***tema.css***, que volem que el tema es diga ***el-meu-tema*** i que volem heredar del tema *default*. 
     2. Afegim les regles que ens interesse, en este cas redefinim el color dels encapçalaments de nivell 1. Quedaria així:
 ```css
 /* @theme el-meu-tema */
-
 @import 'default';
-
 h1 {
   color: violet !important;
 }
