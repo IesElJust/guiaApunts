@@ -1,0 +1,37 @@
+site_name: Material per a Mkdocs
+#docs_dir: "md"
+#site_dir: "docs"
+nav:
+  - 1. El tema Material: index.md
+  - 2. Creació de PDF: 2.pdf.md
+  - 3. Diagrames amb Mermaid: 3.mermaid.md
+  - 4. Admonitions-Alertes: 4.admonitions.md
+  - 5. Formatació de codi: 5.formatacio.md
+  - 6. Cerca i navegació: 6.cerca_navegacio.md
+  - 7. Personalització: 7.tematitzacio.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+
+theme:
+  name: 'material'
+  logo: 'img/logoMarkdown.png'
+  favicon: 'img/logoMarkdown.png'
+  palette:
+    primary: 'white'
+  # extres
+  
+
+#extra_css:
+#  - css/extra.css
+
+
+
+# plugins:
+#   - search
+#   - pdf-export
+
+
+      
