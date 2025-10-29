@@ -1,0 +1,787 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3.busqueda_navegacio/">
+      
+      
+        <link rel="next" href="../5.formatacio/">
+      
+      
+      <link rel="icon" href="../img/logoMarkdown.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>4. Admonitions-Alertes - Material per a Mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creacio-dadmonitions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Material per a Mkdocs" class="md-header__button md-logo" aria-label="Material per a Mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Material per a Mkdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Admonitions-Alertes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Material per a Mkdocs" class="md-nav__button md-logo" aria-label="Material per a Mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    Material per a Mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. El tema Material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.personalitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Personalització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.busqueda_navegacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Búsqueda i navegació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Admonitions-Alertes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. Admonitions-Alertes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dadmonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'Admonitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creació d'Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-installacio-de-lextensio-admonition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació de l'extensió Admonition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sintaxi-i-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sintaxi i tipus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-altres-configuracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Altres configuracions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consells-i-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consells i bones pràctiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.formatacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Formatació de codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.mermaid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Diagrames amb Mermaid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Creació de PDF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dadmonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'Admonitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creació d'Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-installacio-de-lextensio-admonition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació de l'extensió Admonition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sintaxi-i-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sintaxi i tipus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-altres-configuracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Altres configuracions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consells-i-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consells i bones pràctiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="4.admonitions.pdf" title="PDF"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.5h1v3h-1v-3m-5 1h1v-1H7v1M20 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M9.5 10.5A1.5 1.5 0 0 0 8 9H5.5v6H7v-2h1a1.5 1.5 0 0 0 1.5-1.5v-1m5 0A1.5 1.5 0 0 0 13 9h-2.5v6H13a1.5 1.5 0 0 0 1.5-1.5v-3m4-1.5h-3v6H17v-2h1.5v-1.5H17v-1h1.5V9z"></path></svg></a>
+                
+                  
+
+
+  <h1>4. Admonitions-Alertes</h1>
+
+<h2 id="creacio-dadmonitions"><strong>Creació d'Admonitions</strong></h2>
+<p>Les <strong>admonicions</strong> o <strong>avisos</strong> són blocs d'informació destacada dins de la documentació. Aquestes són útils per cridar l'atenció sobre informació important, advertències, consells, exemples o notes. En <strong>Mkdocs Material</strong>, les admonicions es gestionen mitjançant l'extensió <strong>pymdownx.admonition</strong>, que permet afegir diversos tipus de blocs visualment destacats, que ajuden a millorar l'estructura i la claredat de la documentació.</p>
+<h3 id="1-installacio-de-lextensio-admonition"><strong>1. Instal·lació de l'extensió Admonition</strong></h3>
+<p>Per utilitzar les admonicions, cal instal·lar l'extensió <strong>pymdownx.admonition</strong>, que forma part de <strong>Pymdown Extensions</strong>.</p>
+<ol>
+<li><strong>Instal·lació</strong> de <strong>Pymdown Extensions</strong>:</li>
+</ol>
+<p>Si no tens <strong>Pymdown Extensions</strong> instal·lades, pots fer-ho amb el següent comandament:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pymdown-extensions
+</code></pre></div>
+<ol>
+<li><strong>Configuració al fitxer <code>mkdocs.yml</code></strong>:</li>
+</ol>
+<p>Un cop instal·lada l'extensió, l'hem de configurar dins del fitxer de configuració <code>mkdocs.yml</code> a la secció <strong>markdown_extensions</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
+</code></pre></div>
+<h3 id="2-sintaxi-i-tipus"><strong>2. Sintaxi i tipus</strong></h3>
+<p>Amb l'extensió <strong>admonition</strong> activada, podem afegir diversos tipus de blocs d'informació dins dels nostres documents. La sintaxi per crear una admonició és la següent:</p>
+<div class="highlight"><pre><span></span><code>!!! type &quot;Títol&quot;
+    Contingut de l&#39;admonició.
+</code></pre></div>
+<p>On <code>type</code> pot ser un dels següents:</p>
+<ul>
+<li>
+<p><strong>note</strong></p>
+<div class="admonition note">
+<p class="admonition-title">note</p>
+<p>Aquesta és una <strong>nota</strong> que ofereix informació addicional.</p>
+</div>
+</li>
+<li>
+<p><strong>abstract</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">abstract</p>
+<p>Aquest és un <strong>resum</strong> del contingut que es presenta a continuació.</p>
+</div>
+</li>
+<li>
+<p><strong>info</strong></p>
+<div class="admonition info">
+<p class="admonition-title">info</p>
+<p>Aquesta és una <strong>informació</strong> rellevant sobre el tema que estem tractant.</p>
+</div>
+</li>
+<li>
+<p><strong>tip</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">tip</p>
+<p>Un <strong>consell</strong> útil per facilitar la tasca.</p>
+</div>
+</li>
+<li>
+<p><strong>success</strong></p>
+<div class="admonition success">
+<p class="admonition-title">success</p>
+<p>Aquesta és una <strong>notícia d'èxit</strong> per destacar un resultat positiu.</p>
+</div>
+</li>
+<li>
+<p><strong>question</strong></p>
+<div class="admonition question">
+<p class="admonition-title">question</p>
+<p>Què passaria si <strong>fossis</strong> el responsable d'aquesta situació?</p>
+</div>
+</li>
+<li>
+<p><strong>warning</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">warning</p>
+<p><strong>Atenció</strong>: Això podria causar problemes si no es fa amb cura.</p>
+</div>
+</li>
+<li>
+<p><strong>failure</strong></p>
+<div class="admonition failure">
+<p class="admonition-title">failure</p>
+<p>Aquesta acció ha estat un <strong>fracàs</strong>, no va funcionar com s'esperava.</p>
+</div>
+</li>
+<li>
+<p><strong>danger</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">danger</p>
+<p><strong>Perill</strong>: Pot ser perillós si no es pren la precaució necessària.</p>
+</div>
+</li>
+<li>
+<p><strong>bug</strong></p>
+<div class="admonition bug">
+<p class="admonition-title">bug</p>
+<p>Aquest és un <strong>error</strong> que cal resoldre.</p>
+</div>
+</li>
+<li>
+<p><strong>example</strong></p>
+<div class="admonition example">
+<p class="admonition-title">example</p>
+<p>A continuació, un <strong>exemple</strong> d'una implementació funcional.</p>
+</div>
+</li>
+<li>
+<p><strong>quote</strong></p>
+<div class="admonition quote">
+<p class="admonition-title">quote</p>
+<p>Aquesta és una <strong>cita</strong> d'una font destacada que il·lustra el punt que estem discutint.</p>
+</div>
+</li>
+</ul>
+<p>Aquesta sintaxi crea blocs que es mostren amb fons colorit i un títol destacat, facilitant la visualització de la informació rellevant.</p>
+<h3 id="3-altres-configuracions"><strong>3. Altres configuracions</strong></h3>
+<ol>
+<li>
+<p>Eliminem el títol</p>
+<p>Podem eliminar el títol d'una admonició simplement passant com a títol una cadena buida.</p>
+<div class="highlight"><pre><span></span><code>!!! note &quot;&quot;
+
+    Està anotació apareix sense el títol.
+</code></pre></div>
+<div class="admonition note">
+<p>Està anotació apareix sense el títol.</p>
+</div>
+</li>
+<li>
+<p>Imbriquem les admonicions.</p>
+<div class="highlight"><pre><span></span><code>!!! note &quot;Nota de fora&quot;
+
+    Esta és la admonició de més a fora.
+
+    !!! note &quot;Nota de dins&quot;
+
+        Esta és la de més a dins.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota de fora</p>
+<p>Esta és la admonició de més a fora.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota de dins</p>
+<p>Esta és la de més a dins.</p>
+</div>
+</div>
+</li>
+<li>
+<p>Admonicions plegables.</p>
+<p>Per a que les admonicions tinguen la possibilitat de ser plegades, canviem la sintaxi de !!! per ???. Si adicionalment volem que apareguen desplegades (per defecte apareixen plegades), hem d'afegir el símbol + després dels interrogants.</p>
+<div class="admonition warning">
+<p class="admonition-title">Configuració per a Admonicions plegades</p>
+<p>Necessitem afegir <code>pymdownx.details</code> al mkdocs.yml per a que funcione.</p>
+</div>
+<div class="highlight"><span class="filename">Exemple dús d'admonicions plegades</span><pre><span></span><code><span class="sb">```text</span>
+???+ note &quot;Pregunta&quot;
+
+    Quina és l&#39;arrel quadrada de 9?
+
+    ??? question &quot;Veure la resposta&quot;
+
+        3
+<span class="sb">```</span>
+</code></pre></div>
+<details class="note" open="open">
+<summary>Pregunta</summary>
+<p>Quina és l'arrel quadrada de 9?</p>
+<details class="question">
+<summary>Veure la resposta</summary>
+<p>3</p>
+</details>
+</details>
+</li>
+<li>
+<p>Blocs en línia</p>
+<p>Les advertències també es poden representar com a blocs en línia (per exemple, per a barres laterals), col·locant-les a la dreta utilitzant els modificadors <code>inline + end</code> o a l'esquerra utilitzant només el modificador <code>inline</code>:</p>
+<div class="highlight"><span class="filename">Exemple dús d'admonicions plegades</span><pre><span></span><code>!!! note inline &quot;Admonition en bloc&quot;
+
+    Este admonition es situarà a l&#39;esquerra
+
+!!! note inline end &quot;Admonition en bloc&quot;
+
+    Este admonition es situarà a la dreta
+</code></pre></div>
+<div class="admonition note inline">
+<p class="admonition-title">Admonition en bloc</p>
+<p>Este admonition es situarà a l'esquerra</p>
+</div>
+<div class="admonition note inline end">
+<p class="admonition-title">Admonition en bloc</p>
+<p>Este admonition es situarà a la dreta</p>
+</div>
+</li>
+</ol>
+<h3 id="5-consells-i-bones-practiques"><strong>5. Consells i bones pràctiques</strong></h3>
+<ul>
+<li><strong>Ús moderat</strong>: Tot i que les admonicions són molt útils per destacar informació important, és millor utilitzar-les amb moderació. Un excés de blocs pot fer que el contingut siga difícil de llegir i que deixen de captar l'atenció del lector.</li>
+<li><strong>Claredat</strong>: Assegura’t que el títol i el contingut de l’admonició siguen clars i directes.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -20,17 +20,20 @@ Per a personalitzar el tema, només cal modificar el fitxer `mkdocs.yml` per con
 
 Per treballar amb Material per a Mkdocs partirem de la instal·lació que ja tenim realitzada prèviament en el nostre entorn virtual de Python.
 
-Aixi doncs, partint d'aquesta instal·lació, en primer lloc activem el nostre entorn virtual:
+Aixi doncs, partint d'aquesta instal·lació, en primer lloc activem el nostre entorn virtual que vam anomenar mkdocsenv executant:
 
 ```bash
-source venv/bin/activate
+source mkdocsenv/bin/activate
 ```
 
-O bé:
+O bé per als usuaris de Windows:
 
 ```bash
-. venv/bin/activate
+mkdocsenv\Scripts\activate
 ```
+
+!!!tip "Entorn virtual"
+    Canvieu el nom mkdocsenv pel nom del vostre entorn virtual en cas que el nom del vostre entorn siga un altre.
 
 Una vegada amb l'entorn activat, instal·lem el tema *Material*:
 
@@ -46,7 +49,6 @@ theme:
    name: 'material'
 ```
 
-
 <!--
 Algunes **configuracions opcionals** que podrem incorporar en estos moments per millorar l'aparença o la funcionalitat del lloc poden ser les següents:
 
@@ -61,7 +63,6 @@ theme:
 On afegim seccions i la barra de navegació superior.
 -->
 
-
 ## **Plugins i extensions: ampliant les possibilitats de MkDocs**
 
 El tema **Material per a MkDocs** ofereix moltes funcionalitats per defecte, però la seua autèntica potència apareix quan hi afegim **plugins** i **extensions Markdown**.
@@ -71,8 +72,8 @@ Aquests components permeten ampliar les capacitats bàsiques de MkDocs i afegir-
 * **Generar documents PDF** de tot el lloc o d’una pàgina concreta.
 * **Afegir diagrames Mermaid**, per representar fluxos, processos o esquemes amb text.
 * **Crear blocs informatius (admonitions)** per remarcar notes, advertències o exemples.
-* **Millorar la visualització del codi font** amb ressaltat de sintaxi i numeració de línies.
-* **Afegir cerca interna** per facilitar la navegació pel contingut.
+* **Millorar la visualització del codi font de programes informàtics** amb ressaltat de sintaxi i numeració de línies.
+* **Afegir búsqueda interna** per facilitar la localització de contingut concret.
 * **Mostrar imatges en finestres emergents** (lightbox).
 * **Personalitzar la interfície** amb configuracions de tema, colors i icones addicionals.
 

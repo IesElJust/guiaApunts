@@ -1,0 +1,727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../4.admonitions/">
+      
+      
+        <link rel="next" href="../6.mermaid/">
+      
+      
+      <link rel="icon" href="../img/logoMarkdown.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>5. Formatació de codi - Material per a Mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#formatacio-de-codi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Material per a Mkdocs" class="md-header__button md-logo" aria-label="Material per a Mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Material per a Mkdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Formatació de codi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Material per a Mkdocs" class="md-nav__button md-logo" aria-label="Material per a Mkdocs" data-md-component="logo">
+      
+  <img src="../img/logoMarkdown.png" alt="logo">
+
+    </a>
+    Material per a Mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. El tema Material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.personalitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Personalització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.busqueda_navegacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Búsqueda i navegació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.admonitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Admonitions-Alertes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5. Formatació de codi
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5. Formatació de codi
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formatacio-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatació de Codi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatació de Codi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-installacio-de-les-extensions-per-formatar-el-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació de les extensions per formatar el codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sintaxi-per-afegir-blocs-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sintaxi per afegir blocs de codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracions-sobre-blocs-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuracions sobre blocs de codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-consells-i-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Consells i bones pràctiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.mermaid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Diagrames amb Mermaid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Creació de PDF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formatacio-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatació de Codi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatació de Codi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-installacio-de-les-extensions-per-formatar-el-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instal·lació de les extensions per formatar el codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sintaxi-per-afegir-blocs-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sintaxi per afegir blocs de codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracions-sobre-blocs-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuracions sobre blocs de codi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-consells-i-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Consells i bones pràctiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="5.formatacio.pdf" title="PDF"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.5h1v3h-1v-3m-5 1h1v-1H7v1M20 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M9.5 10.5A1.5 1.5 0 0 0 8 9H5.5v6H7v-2h1a1.5 1.5 0 0 0 1.5-1.5v-1m5 0A1.5 1.5 0 0 0 13 9h-2.5v6H13a1.5 1.5 0 0 0 1.5-1.5v-3m4-1.5h-3v6H17v-2h1.5v-1.5H17v-1h1.5V9z"></path></svg></a>
+                
+                  
+
+
+  <h1>5. Formatació de codi</h1>
+
+<h2 id="formatacio-de-codi"><strong>Formatació de Codi</strong></h2>
+<p>Un dels aspectes més importants en la documentació tècnica és la presentació correcta del <strong>codi font</strong>. El tema <strong>Material per Mkdocs</strong> permet integrar fàcilment <strong>formatació de codi</strong> per a diversos llenguatges de programació, utilitzant extensions com <strong>Pymdown Extensions</strong> i el suport per a resaltar la sintaxi del codi i afegir numeració de línies.</p>
+<p>A continuació, veurem com configurar-ho i utilitzar-ho al nostre lloc de documentació.</p>
+<h3 id="1-installacio-de-les-extensions-per-formatar-el-codi"><strong>1. Instal·lació de les extensions per formatar el codi</strong></h3>
+<p>Per habilitar la formatació de codi amb resalta de sintaxi i numeració de línies, necessitem instal·lar l'extensió <strong>Pymdown Extensions</strong>, que inclou la funcionalitat de resaltar sintaxi amb <strong>highlight</strong> i altres eines útils per a blocs de codi.</p>
+<ol>
+<li><strong>Instal·lació</strong> de <strong>Pymdown Extensions</strong>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pymdown-extensions
+</code></pre></div>
+<ol>
+<li><strong>Configuració al fitxer <code>mkdocs.yml</code></strong>:</li>
+</ol>
+<p>Un cop instal·lada l'extensió, afegim la configuració al fitxer <code>mkdocs.yml</code> per activar les extensions de <strong>highlight</strong> i <strong>superfences</strong>. La configuració bàsica seria la següent:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.highlight</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+</code></pre></div>
+<ul>
+<li><code>linenums: true</code> activa la numeració de línies per als blocs de codi.</li>
+<li><strong>superfences</strong> afegeix una sintaxi més flexible i potent per incloure fragments de codi en diferents formats.</li>
+</ul>
+<h3 id="2-sintaxi-per-afegir-blocs-de-codi"><strong>2. Sintaxi per afegir blocs de codi</strong></h3>
+<p>Un cop configurat, podem afegir blocs de codi dins dels nostres fitxers Markdown. La sintaxi per crear blocs de codi és la següent:</p>
+<div class="highlight"><pre><span></span><code><span class="sb">```language</span>
+<span class="s"># Aci el codi font</span>
+<span class="sb">```</span>
+</code></pre></div>
+<p>On <strong><code>language</code></strong> és el llenguatge de programació que vols resaltar. Per exemple, per mostrar codi Python, utilitzem:</p>
+<div class="highlight"><pre><span></span><code><span class="sb">```python</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="3-configuracions-sobre-blocs-de-codi"><strong>3. Configuracions sobre blocs de codi</strong></h3>
+<p>A més de la sintaxi bàsica per a blocs de codi, també podem personalitzar l'aspecte del codi a través de l'estil CSS o altres configuracions avançades. Algunes opcions addicionals inclouen:</p>
+<ol>
+<li>
+<p><strong>Afegir títols als fragments de codi</strong>: Per tal de proporcionar context addicional, es pot afegir un títol personalitzat a un bloc de codi utilitzant l'opció <code>title="&lt;custom title&gt;"</code> després del tipus de llenguatge, per exemple per mostrar el nom d'un fitxer.</p>
+<div class="highlight"><span class="filename">Exemple de títol</span><pre><span></span><code>``` py title=&quot;bubble_sort.py&quot;
+def bubble_sort(items):
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i):
+            if items[j] &gt; items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+</code></pre></div>
+<div class="highlight"><span class="filename">bubble_sort.py</span><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Afegir numeració de línies</strong>: Si tens habilitada l'opció <strong>linenums</strong>, es mostrarà la numeració de línies al costat esquerre del codi.</p>
+<p>Exemple de configuració al fitxer <code>mkdocs.yml</code>:</p>
+<div class="highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.highlight</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="sb">```python</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>Botó de còpia de codi</strong>: Els blocs de codi poden mostrar automàticament un botó a la dreta per permetre a l'usuari copiar el contingut d'un bloc de codi al porta-retalls.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.copy</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="sb">```python</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+</code></pre></div>
+<div class="copy highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Anotacions de codi</strong>: Les anotacions de codi ofereixen una manera còmoda i amigable d'adjuntar contingut arbitrari a seccions específiques de blocs de codi afegint marcadors numèrics al bloc i comentaris en línia en l'idioma del bloc de codi.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.copy</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Anotacions al codi</span><pre><span></span><code><span class="sb">```python</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+    <span class="k">pass</span> <span class="c1"># (2)!</span>
+<span class="sb">```</span>
+
+<span class="k">1.</span>  Sóc una anotació de codi!
+<span class="k">2.</span>  Puc contindre codi, text formatat, imatges... bàsicament qualsevol cosa que es puga escriure en Markdown.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola món!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+    <span class="k">pass</span> <span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li>Sóc una anotació de codi!</li>
+<li>Puc contindre codi, text formatat, imatges... bàsicament qualsevol cosa que es puga escriure en Markdown.</li>
+</ol>
+</li>
+<li>
+<p><strong>Incrustració de fitxers externs</strong>: Quan els fragments de codi estan habilitats, es pot incrustar contingut d'altres fitxers (inclosos els fitxers font) utilitzant la --8&lt;--notació directament des d'un bloc de codi:
+    <div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.snippets</span>
+</code></pre></div></p>
+<div class="highlight"><span class="filename">Code block with external content</span><pre><span></span><code>``` title=&quot;docs/src_example/hello_world.py&quot;
+--8&lt;-- &quot;docs/src_example/hello_world.py&quot;
+```
+</code></pre></div>
+<div class="highlight"><span class="filename">docs/src_example/hello_world.py</span><pre><span></span><code>def function():
+    print(&quot;Hello world!&quot;)
+</code></pre></div>
+</li>
+</ol>
+<h3 id="6-consells-i-bones-practiques"><strong>6. Consells i bones pràctiques</strong></h3>
+<ul>
+<li><strong>Ús moderat</strong>: Tot i que la formatació de codi és una part crucial de la documentació, intenta evitar posar massa codi dins d'una mateixa pàgina. Si tens fragments molt grans de codi, considera posar-los en fitxers externs i posar els enllaços per a que se'ls descarreguen i els analitzen en local.</li>
+<li><strong>Claritat en els exemples</strong>: Assegura't que el codi siga clar i fàcil de llegir. Afegeix comentaris o anotacions als fragments per explicar què fa cada part del codi.</li>
+<li><strong>Tipus de codi</strong>: Si el codi prové d'exemples que no són tan habituals, afegeix el llenguatge correctament a la sintaxi per assegurar que el resaltat es fa adequadament.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
